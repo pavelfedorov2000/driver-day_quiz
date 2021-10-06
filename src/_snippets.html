@@ -1,0 +1,105 @@
+<!-- Tabs -->
+<div class="tabs">
+    <a href="#tab-1" class="tab tab--active"></a>
+    <a href="#tab-2" class="tab"></a>
+</div>
+<div id="tab-1" class="tabs-content tabs-content--active"></div>
+<div id="tab-2" class="tabs-content"></div>
+
+<!-- Accordion -->
+<div class="accordion">
+    <div class="accordion__item">
+        <h6 class="accordion__item-summary"></h6>
+        <div class="accordion__item-details"></div>
+    </div>
+</div>
+
+<!-- svg-sprite -->
+<!-- Icon -->
+<svg>
+    <use xlink:href="img/sprite.svg#"></use>
+</svg>
+<!-- Image -->
+<svg class="" role="img" aria-label="">
+    <use xlink:href="img/sprite.svg#"></use>
+</svg>
+
+
+<!-- Адаптивные изображения -->
+<picture>
+    <source media="(min-width: 992px)" srcset="img/.jpg">
+    <source media="(min-width: 768px)" srcset="img/_md.jpg">
+    <source media="(min-width: 576px)" srcset="img/_sm.jpg">
+    <source media="(min-width: 320px)" srcset="img/_xs.jpg">
+    <img class="" src="img/_xs.jpg" alt="">
+</picture>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-scrollbar"></div>
+</div>
+
+<!-- Breadcrumbs -->
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+                <a href="#">
+                    Главная
+                </a>
+            </li>
+            <li class="breadcrumbs__item">
+                <span>
+
+                </span>
+            </li>
+        </ol>
+    </div>
+</nav>
+
+<!-- Pagination -->
+<nav class="pagination" aria-label="pagination">
+    <ol class="pagination__list">
+        <li class="pagination__item">
+            <a href="#" class="pagination__link"></a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link"></a>
+        </li>
+        <li class="pagination__item">
+            <a href="#" class="pagination__link"></a>
+        </li>
+    </ol>
+</nav>
+
+<!-- CUSTOM SELECT -->
+<form class="select-form">
+    <div class="select" data-state="">
+        <div class="select__title"></div>
+        <div class="select__content">
+            <input id="singleSelect0" class="select__input" type="radio" name="singleSelect" checked />
+            <label for="singleSelect0" tabindex="0" class="select__label" data-value=""></label>
+            <input id="singleSelect1" class="select__input" type="radio" name="singleSelect" />
+            <label for="singleSelect1" tabindex="0" class="select__label" data-value=""></label>
+            <input id="singleSelect2" class="select__input" type="radio" name="singleSelect" disabled />
+            <label for="singleSelect2" tabindex="0" class="select__label" data-value=""></label>
+            <input id="singleSelect3" class="select__input" type="radio" name="singleSelect" />
+            <label for="singleSelect3" tabindex="0" class="select__label" data-value=""></label>
+            <input id="singleSelect4" class="select__input" type="radio" name="singleSelect" />
+            <label for="singleSelect4" tabindex="0" class="select__label" data-value="Гомельская"></label>
+            <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
+            <label for="singleSelect5" tabindex="0" class="select__label" data-value=""></label>
+        </div>
+    </div>
+</form>

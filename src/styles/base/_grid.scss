@@ -1,0 +1,21 @@
+.container {
+	width: $container + $gap * 2;
+	max-width: 100%;
+	padding: 0 $gap;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	overflow-x: hidden;
+	@extend %flex-col;
+	min-height: 100vh;
+	/* @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+						background: #fff;
+						backdrop-filter: blur(31px);
+					} */
+}
+
+.page {
+	flex: 1 1 auto;
+}

@@ -1,0 +1,62 @@
+.header {
+    @extend %pos-center-x;
+    top: 2rem;
+
+    // .header__inner
+
+    &__inner {
+        @extend %flex-row-center;
+    }
+
+    // .header__menu
+
+    &__menu {
+        margin-left: 15.3rem;
+        margin-right: auto;
+    }
+
+    // .header__menu-item
+
+    &__menu-item {
+        &:not(:last-child) {
+            margin-right: 8rem;
+        }
+    }
+
+    // .header__btn
+
+    &__btn {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}
+
+.logo {
+    width: 25.5rem;
+    height: 7rem;
+
+    // .logo__img
+
+    &__img {
+        object-fit: contain;
+    }
+}
+
+.menu {
+    // .menu__item
+
+    &__item {
+        display: inline-block;
+    }
+
+    // .menu__link
+
+    &__link {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }
+}
+
+.burger-btn {}

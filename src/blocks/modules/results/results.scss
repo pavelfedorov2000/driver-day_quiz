@@ -1,0 +1,88 @@
+.results {
+
+    position: relative;
+    padding: 11.3rem 0 36.6rem;
+
+    &__decor {
+        position: absolute;
+        top: 2rem;
+        left: -5rem;
+        z-index: -1;
+    }
+
+    // .results__inner
+
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 6.5rem;
+    }
+
+    &__questions {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    // .results__left
+
+    &__left {
+        width: 59.2rem;
+    }
+
+    // .results__title
+
+    &__title {
+        margin-bottom: 6rem;
+    }
+
+    // .results__left-text
+
+    &__text {
+        width: 53.8rem;
+        @extend %text-16;
+        font-weight: 600;
+        color: #4F4F4F;
+        margin-bottom: 10rem;
+    }
+
+    // .results__tabs
+
+    &__tabs {
+        >* {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
+    // .results__right
+
+    &__right {
+        margin-left: 15.2rem;
+    }
+
+    // .results__winners
+
+    &__winners {
+        //margin-top: 1rem;
+        @extend %text-24;
+        font-weight: 600;
+        @extend %vertical-align;
+    }
+
+    &__timer {
+        @extend %text-96;
+        font-weight: 300;
+        @extend %gradient-text;
+        margin-left: 4rem;
+    }
+
+    // .results__tabs-content
+
+    &__tabs-content {
+        width: 64rem;
+        @extend %text-16;
+        font-weight: 600;
+    }
+}

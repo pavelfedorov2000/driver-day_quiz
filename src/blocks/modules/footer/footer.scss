@@ -1,0 +1,37 @@
+.footer {
+
+    position: relative;
+    padding: 11.6rem 0 9.2rem;
+    background-image: url(../img/bg/footer-bg.svg);
+    background-position: -2.4rem 0rem;
+    background-repeat: no-repeat;
+    &:before {
+        //content: ;
+        position: absolute;
+        top: 0;
+        left: -2.4rem;
+        //background-image: url(../img/bg/footer-bg.svg);
+    }
+
+    &__inner {
+        @extend %flex-row-center;
+    }
+
+    // .footer__logo
+
+    &__logo {}
+
+    // .footer__menu
+
+    &__menu {
+        margin: 0 auto;
+    }
+
+    // .footer__menu-item
+
+    &__menu-item {
+        &:not(:last-child) {
+            margin-right: 8rem;
+        }
+    }
+}

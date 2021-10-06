@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<!-- <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Викторина ко Дню водителя</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		@@include('./blocks/modules/burger/burger-menu/_burger-menu.html')
+
+		<main class="page">
+			@@include('blocks/modules/promo/_promo.html')
+			@@include('blocks/modules/about/_about.html')
+			@@include('blocks/modules/quiz/_quiz.html')
+			@@include('blocks/modules/results/_results.html')
+		</main>
+
+		@@include('./blocks/modules/footer/_footer.html')
+
+		<!-- @@include('./blocks/modules/popups/_popups.html') -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- ==================== SLIDERS ======================= -->
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<!-- ================== POPUPS ======================  -->
+	<!-- <script src="libs/jquery.magnific-popup.min.js"></script> -->
+
+	<!-- <script src="libs/jquery.validate.min.js"></script> -->
+	<!-- <script src="libs/jquery.maskedinput.min.js"></script> -->
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

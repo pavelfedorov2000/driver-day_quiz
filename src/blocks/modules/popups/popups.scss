@@ -1,0 +1,25 @@
+.mfp-container {
+    @media (max-width: 900px) {
+        padding: 0;
+    }
+}
+
+button.mfp-close {
+    top: 24px;
+    right: 31px;
+    width: 16px;
+    height: 16px;
+    font-size: 0;
+    background: url(../img/popup-close.svg);
+    background-size: 100%;
+}
+
+.popup {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+
+    &__title {}
+
+    &__subtitle {}
+}

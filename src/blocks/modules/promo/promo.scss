@@ -1,0 +1,52 @@
+.promo {
+    position: relative;
+    padding-top: 24.5rem;
+    padding-bottom: 28.8rem;
+
+    &__decor {
+        position: absolute;
+        z-index: -1;
+        top: 0rem;
+        left: -5rem;
+    }
+    // .promo__content
+
+    &__content {
+        width: 91.5rem;
+        @extend %flex-col;
+    }
+
+    // .promo__logo
+
+    &__logo {
+        height: 20.6rem;
+        margin-bottom: 2.3rem;
+    }
+
+    // .promo__title
+
+    &__title {
+        font-weight: 600;
+        @extend %text-48;
+        margin-bottom: 9rem;
+    }
+
+    // .promo__action-link
+
+    &__action-link {
+        @extend .btn;
+        background-color: #fff;
+        align-self: center;
+        padding: 2rem 5.2rem;
+    }
+
+    // .promo__img
+
+    &__img {
+        position: absolute;
+        top: 7.2rem;
+        right: -8.6rem;
+        width: 111.1rem;
+        height: 88.8rem;
+    }
+}
