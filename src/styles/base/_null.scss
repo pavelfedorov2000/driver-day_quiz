@@ -11,17 +11,20 @@ html {
     box-sizing: border-box;
     font-size: calc(100vw / 1920 * 10);
 
-    @media(max-width: 1024px) {
+    @media(max-width: 992px) {
         font-size: calc(100vw / 767 * 10);
     }
 
     @media(max-width: 767px) {
-        font-size: calc(100vw / 479 * 10);
+        font-size: calc(100vw / 575 * 10);
     }
 
-    @media(max-width: 479px) {
+    @media(max-width: 575px) {
         font-size: calc(100vw / 375 * 10);
     }
+    /* @media(max-width: 375px) {
+        font-size: calc(100vw / 320 * 10);
+    } */
     /* @media(max-width: 375px) {
         font-size: calc(100vw / 320 * 10);
     } */
@@ -41,6 +44,9 @@ body {
         width: 0;
         height: 0;
     } */
+    &._lock {
+        overflow-y: hidden;
+    }
 }
 
 h1,

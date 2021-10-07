@@ -42,6 +42,7 @@
     height: 4rem;
     border-radius: 50%;
     background-color: $accent;
+    cursor: pointer;
 }
 
 .radio-box:checked+.radio-style:before {
@@ -49,7 +50,7 @@
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $dark;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,4 +62,9 @@
     font-weight: 600;
     color: #4F4F4F;
     padding-left: 7rem;
+    cursor: pointer;
+    @media(max-width: 992px) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
 }

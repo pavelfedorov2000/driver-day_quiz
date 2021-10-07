@@ -5,27 +5,78 @@ $(function () {
     //const burgerMenu = document.querySelector('.burger-btn');
 
     $('.burger-btn').on('click', function () {
-        $('.burger-btn').addClass('burger-btn--active');
         $('.burger-menu').addClass('burger-menu--active');
+        $('body').addClass('_lock');
     });
 
     $('.burger-menu__close-btn').on('click', function () {
-        $('.burger-btn').removeClass('burger-btn--active');
         $('.burger-menu').removeClass('burger-menu--active');
+        $('body').removeClass('_lock');
     });
 
-    $('.header__menu-link').on('click', function () {
+    $('.header__menu-item').on('click', function () {
         $('.burger-menu').removeClass('burger-menu--active');
+        $('body').removeClass('_lock');
     });
+        
+    const topWinnersSlider = new Swiper('.top-winners__slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        /* pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }, */
+        navigation: {
+            nextEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-next',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+        }
+    });
+
+    // Логика вопросов квиза
+    let currentQuestion = 0;
+
+    // Custom select
+    /* let selectItem = document.querySelector('.select');
+    let selectTitle = selectItem.querySelector('.select__title');
+    let selectLabels = selectItem.querySelectorAll('.select__label');
+    // Toggle menu
+    selectTitle.addEventListener('click', () => {
+        if ('active' === selectItem.getAttribute('data-state')) {
+            selectItem.setAttribute('data-state', '');
+        } else {
+            selectItem.setAttribute('data-state', 'active');
+        }
+    });
+    // Close when click to option
+    for (let i = 0; i < selectLabels.length; i++) {
+        selectLabels[i].addEventListener('click', (e) => {
+            selectTitle.textContent = e.target.textContent;
+            selectItem.setAttribute('data-state', '');
+        });
+    } */
 
     $('.tab').on('click', function (e) {
     e.preventDefault();
-
-    $($(this).siblings()).removeClass('tab--active');
-    $('.tabs-content').removeClass('tabs-content--active');
-
-    $(this).addClass('tab--active');
-    $($(this).attr('href')).addClass('tabs-content--active');
+    if ($(window).width() < 992) {
+        //$($(this).siblings()).removeClass('tab--active');
+        //$('.tabs-content').slideUp('300');
+        $(this).toggleClass('tab--active');
+        $($(this).attr('href')).slideToggle('300');
+    } else {
+        $($(this).parent().siblings().find('a.tab')).removeClass('tab--active');
+        $('.tabs-content').removeClass('tabs-content--active');
+        $(this).addClass('tab--active');
+        $($(this).attr('href')).addClass('tabs-content--active');
+    }
 });
 
     $("a[href^='#']").not('.tab').click(function () {
@@ -187,26 +238,6 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
-
-    // Custom select
-    /* let selectItem = document.querySelector('.select');
-    let selectTitle = selectItem.querySelector('.select__title');
-    let selectLabels = selectItem.querySelectorAll('.select__label');
-    // Toggle menu
-    selectTitle.addEventListener('click', () => {
-        if ('active' === selectItem.getAttribute('data-state')) {
-            selectItem.setAttribute('data-state', '');
-        } else {
-            selectItem.setAttribute('data-state', 'active');
-        }
-    });
-    // Close when click to option
-    for (let i = 0; i < selectLabels.length; i++) {
-        selectLabels[i].addEventListener('click', (e) => {
-            selectTitle.textContent = e.target.textContent;
-            selectItem.setAttribute('data-state', '');
-        });
-    } */
 });
 
 

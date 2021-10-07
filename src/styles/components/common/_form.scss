@@ -1,1 +1,9 @@
-
+.input {
+    @extend %text-16;
+    line-height: 1.9rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid rgba(4, 62, 68, 0.4);
+    &::placeholder {
+        color: rgba(4, 62, 68, 0.4);
+    }
+}

@@ -1,3 +1,19 @@
 @import './libs/libs';
 @import './base/general';
 @import '../blocks/modules';
+
+.tablet-visible {
+    display: none;
+
+    @media(max-width: 767px) {
+        display: block;
+    }
+}
+
+.mob-visible {
+    display: none;
+
+    @media(max-width: 575px) {
+        display: block;
+    }
+}

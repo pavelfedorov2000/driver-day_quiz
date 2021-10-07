@@ -1,2 +1,8 @@
-@import './burger-btn/burger-btn.scss';
 @import './burger-menu/burger-menu.scss';
+
+.burger-btn {
+    display: none;
+    @media(max-width: 992px) {
+        display: block;
+    }
+}

@@ -1,5 +1,10 @@
 .tabs-content {
     display: none;
+    @extend %text-16;
+    font-weight: 600;
+    @media(max-width: 992px) {
+        padding-top: 3rem;
+    }
     &--active {
         display: block;
     }
@@ -10,6 +15,15 @@
     @extend %text-36;
     font-weight: 600;
     padding-right: 6rem;
+    @media(max-width: 992px) {
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+    }
+    @media(max-width: 767px) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        padding-right: 4.5rem;
+    }
     &:after {
         content: '';
         position: absolute;
@@ -22,6 +36,12 @@
         background-size: contain;
         background-repeat: no-repeat;
         transition: .4s transform;
+        @media(max-width: 992px) {
+            top: 0;
+        }
+        @media(max-width: 767px) {
+            top: -0.5rem;
+        }
     }
     &--active {
         &:after {

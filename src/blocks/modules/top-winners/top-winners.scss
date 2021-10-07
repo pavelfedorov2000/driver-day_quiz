@@ -1,0 +1,120 @@
+.top-winners {
+
+    padding: 9.6rem 0 35rem;
+    @media(max-width: 992px) {
+        padding: 11rem 0 13.2rem;
+    }
+
+    // .top-winners__inner
+
+    &__inner {
+        @extend %flex-row-center;
+    }
+
+    // .top-winners__img
+
+    &__img {
+        width: 63.7rem;
+        height: 63.7rem;
+        flex-shrink: 0;
+        margin-left: -14.7rem;
+        @media(max-width: 992px) {
+            width: 37.2rem;
+            height: 37.2rem;
+            margin: -7rem auto -10rem;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+
+    // .top-winners__content
+
+    &__content {
+        width: 137rem;
+        margin-left: -10rem;
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    // .top-winners__title
+
+    &__title {
+        font-weight: 800;
+        font-size: 7.2rem;
+        line-height: 8.6rem;
+        margin-bottom: 6rem;
+        @media(max-width: 992px) {
+            font-size: 3.5rem;
+            line-height: 4.3rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__slider-arrows {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 0 5rem auto;
+        @media(max-width: 992px) {
+            justify-content: center;
+            margin: 3rem auto 0;
+        }
+        >* {
+            &:not(:last-child) {
+                margin-right: 6rem;
+            }
+        }
+    }
+
+    &__slider {
+        margin-top: -1rem;
+        .swiper-wrapper {
+            padding-bottom: 1rem;
+        }
+        .swiper-slide {
+            min-height: 17rem;
+        }
+    }
+}
+
+.top-winner {
+    padding: 2rem;
+    background-color: #FFF;
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    text-align: center;
+    @extend %flex-col;
+
+    // .top-winner__name
+
+    &__name {
+        font-weight: 700;
+        @extend %text-24;
+        margin-bottom: 1.8rem;
+    }
+
+    // .top-winner__info
+
+    &__info {
+        p {
+            @extend %text-18;
+            font-weight: 500;
+            color: #65C10E;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-container {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}

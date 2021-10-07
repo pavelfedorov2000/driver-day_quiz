@@ -1,14 +1,6 @@
 @import './vars';
 @import './mixins';
-@import './fonts';
 @import './null';
 @import './grid';
-
-.mob-visible {
-    display: none;
-    @media(max-width: 479px) {
-        display: block;
-    }
-}
 
 @import '../components/components';

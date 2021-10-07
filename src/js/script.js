@@ -5,24 +5,44 @@ $(function () {
     //const burgerMenu = document.querySelector('.burger-btn');
 
     $('.burger-btn').on('click', function () {
-        $('.burger-btn').addClass('burger-btn--active');
         $('.burger-menu').addClass('burger-menu--active');
+        $('body').addClass('_lock');
     });
 
     $('.burger-menu__close-btn').on('click', function () {
-        $('.burger-btn').removeClass('burger-btn--active');
         $('.burger-menu').removeClass('burger-menu--active');
+        $('body').removeClass('_lock');
     });
 
-    $('.header__menu-link').on('click', function () {
+    $('.header__menu-item').on('click', function () {
         $('.burger-menu').removeClass('burger-menu--active');
+        $('body').removeClass('_lock');
+    });
+        
+    const topWinnersSlider = new Swiper('.top-winners__slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        /* pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }, */
+        navigation: {
+            nextEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-next',
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+        }
     });
 
-    @@include('tabs.js')
-
-    @@include('scroll.js')
-
-    @@include('dinamic-adapt.js')
+    // Логика вопросов квиза
+    let currentQuestion = 0;
 
     // Custom select
     /* let selectItem = document.querySelector('.select');
@@ -43,6 +63,12 @@ $(function () {
             selectItem.setAttribute('data-state', '');
         });
     } */
+
+    @@include('tabs.js')
+
+    @@include('scroll.js')
+
+    @@include('dinamic-adapt.js')
 });
 
 
