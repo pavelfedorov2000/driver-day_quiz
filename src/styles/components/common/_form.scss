@@ -6,4 +6,8 @@
     &::placeholder {
         color: rgba(4, 62, 68, 0.4);
     }
+    @media(max-width: 767px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }

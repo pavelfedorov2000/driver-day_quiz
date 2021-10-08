@@ -1,19 +1,24 @@
 <div class="popup enter-popup" id="enter-popup">
-    <h4 class="popup__title enter-popup__title">Вход</h4>
-    <form action="#">
-        <input class="input popup__form-input" type="email" name="email" placeholder="Введите ваш email">
-        <input class="input popup__form-input" type="password" name="password" placeholder="Пароль">
-        <small class="popup__form-agree">
-            Нажимая кнопку вы соглашаетесь на обработку ваших персональных данных
-        </small>
-        <button class="common-btn popup__form-btn" type="submit">
-            Войти
-        </button>
-    </form>
-    <div class="popup__footer">
-        Нет учетной записи?
-        <button class="js-register-btn" type="button">
-            Зарегистрироваться
-        </button>
+    <button class="popup__close" type="button">
+        <img src="img/icons/close.svg" alt="кнопка закрыть">
+    </button>
+    <div class="popup__body">
+        <h4 class="popup__title enter-popup__title">Вход</h4>
+        <form class="popup__form" action="#">
+            <input class="input popup__form-input" type="email" name="email" placeholder="Введите ваш email" required>
+            <input class="input popup__form-input" type="password" name="password" placeholder="Пароль" required>
+            <small class="popup__form-agree">
+                Нажимая кнопку вы соглашаетесь на обработку ваших персональных данных
+            </small>
+            <button class="common-btn popup__form-btn" type="submit">
+                Войти
+            </button>
+            <div class="popup__footer">
+                Нет учетной записи?
+                <button class="popup__link register-link" type="button">
+                    Зарегистрироваться
+                </button>
+            </div>
+        </form>
     </div>
 </div>

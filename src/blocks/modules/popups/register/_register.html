@@ -1,42 +1,54 @@
 <div class="popup register-popup" id="register-popup">
-    <h4 class="popup__title register-popup__title">Регистрация</h4>
-    <form action="#">
-        <input class="input popup__form-input" name="name" placeholder="Введите Фамилию Имя Отчество">
-        <input class="input popup__form-input" name="position" placeholder="Должность">
-        <form class="select-form">
-            <div class="select" data-state="">
-                <div class="select__title">Выберите склад</div>
-                <div class="select__content">
-                    <input id="singleSelect0" class="select__input" type="radio" name="singleSelect" checked />
-                    <label for="singleSelect0" tabindex="0" class="select__label" data-value="Выберите склад">Выберите
-                        склад</label>
-                    <input id="singleSelect1" class="select__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect1" tabindex="0" class="select__label" data-value="Склад 1">Склад 1</label>
-                    <input id="singleSelect2" class="select__input" type="radio" name="singleSelect" disabled />
-                    <label for="singleSelect2" tabindex="0" class="select__label" data-value="Склад 2">Склад 2</label>
-                    <input id="singleSelect3" class="select__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect3" tabindex="0" class="select__label" data-value="Склад 3">Склад 3</label>
-                    <input id="singleSelect4" class="select__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect4" tabindex="0" class="select__label" data-value="Склад 4">Склад 4</label>
-                    <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect5" tabindex="0" class="select__label" data-value="Склад 5">Склад 5</label>
-                    <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
-                    <label for="singleSelect5" tabindex="0" class="select__label" data-value="Склад 6">Склад 6</label>
+    <button class="popup__close" type="button">
+        <img src="img/icons/close.svg" alt="кнопка закрыть">
+    </button>
+    <div class="popup__body">
+        <h4 class="popup__title register-popup__title">Регистрация</h4>
+        <form class="popup__form" action="#">
+            <input class="input popup__form-input" name="name" placeholder="Введите Фамилию Имя Отчество" required>
+            <input class="input popup__form-input" name="position" placeholder="Должность">
+            <div class="select-form popup__form-input">
+                <div class="select" data-state="">
+                    <div class="select__title">Выберите склад</div>
+                    <div class="select__content">
+                        <input id="singleSelect0" class="select__input" type="radio" name="singleSelect" checked />
+                        <label for="singleSelect0" tabindex="0" class="select__label"
+                            data-value="Выберите склад">Выберите
+                            склад</label>
+                        <input id="singleSelect1" class="select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect1" tabindex="0" class="select__label" data-value="Склад 1">Склад
+                            1</label>
+                        <input id="singleSelect2" class="select__input" type="radio" name="singleSelect" disabled />
+                        <label for="singleSelect2" tabindex="0" class="select__label" data-value="Склад 2">Склад
+                            2</label>
+                        <input id="singleSelect3" class="select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect3" tabindex="0" class="select__label" data-value="Склад 3">Склад
+                            3</label>
+                        <input id="singleSelect4" class="select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect4" tabindex="0" class="select__label" data-value="Склад 4">Склад
+                            4</label>
+                        <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect5" tabindex="0" class="select__label" data-value="Склад 5">Склад
+                            5</label>
+                        <input id="singleSelect5" class="select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect5" tabindex="0" class="select__label" data-value="Склад 6">Склад
+                            6</label>
+                    </div>
                 </div>
             </div>
+            <input class="input popup__form-input" type="email" name="email" placeholder="Введите ваш email" required>
+            <small class="popup__form-agree">
+                Нажимая кнопку вы соглашаетесь на обработку ваших персональных данных
+            </small>
+            <button class="common-btn popup__form-btn" type="submit">
+                Зарегистрироваться
+            </button>
+            <div class="popup__footer">
+                Уже зарегистрировались?
+                <button class="enter-link popup__link" type="button">
+                    Войти
+                </button>
+            </div>
         </form>
-        <input class="input popup__form-input" type="email" name="email" placeholder="Введите ваш email">
-        <small class="popup__form-agree">
-            Нажимая кнопку вы соглашаетесь на обработку ваших персональных данных
-        </small>
-        <button class="common-btn popup__form-btn" type="submit">
-            Зарегистрироваться
-        </button>
-    </form>
-    <div class="popup__footer">
-        Уже зарегистрировались?
-        <button class="js-enter-btn" type="button">
-            Войти
-        </button>
     </div>
 </div>

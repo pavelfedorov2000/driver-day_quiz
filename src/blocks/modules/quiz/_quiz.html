@@ -3,46 +3,78 @@
         <div class="quiz__inner">
             <div class="quiz__content">
                 <div class="quiz__questions-counter">
-                    Вопрос <span class="current">2</span> из <span class="overall">10</span>
+                    Вопрос <span id="current-question"></span> из <span class="quiz-length"></span>
                 </div>
                 <form class="quiz__body" action="#">
                     <fieldset class="quiz-question" data-question="1">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 1",
+                        "counter": "1"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="2">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 2",
+                        "counter": "2"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="3">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 3",
+                        "counter": "3"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="4">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 4",
+                        "counter": "4"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="5">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 5",
+                        "counter": "5"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="6">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 6",
+                        "counter": "6"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="7">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 7",
+                        "counter": "7"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="8">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 8",
+                        "counter": "8"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="9">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 9",
+                        "counter": "9"
+                        })
                     </fieldset>
                     <fieldset class="quiz-question" data-question="10">
-                        @@include('./_question.html')
+                        @@include('./_question.html', {
+                        "question": "Вопрос 10",
+                        "counter": "10"
+                        })
                     </fieldset>
                 </form>
                 <nav class="quiz__nav-buttons">
                     <button id="back-btn" class="common-btn quiz__nav-btn" type="button">Назад</button>
-                    <button id="next-btn" class="common-btn quiz__nav-btn" type="button">Следующий вопрос</button>
+                    <button id="next-btn" class="common-btn quiz__nav-btn disabled" type="button"
+                        style="margin-left: auto;">Следующий вопрос</button>
                 </nav>
             </div>
-            <div class="quiz__img" data-da=".quiz, 992, first">
+            <div class="quiz__img wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="1s"
+                data-da=".quiz, 992, first">
                 <picture>
                     <source media="(min-width: 768px)" srcset="img/content/man.png">
                     <source media="(min-width: 320px)" srcset="img/content/man_sm.png">

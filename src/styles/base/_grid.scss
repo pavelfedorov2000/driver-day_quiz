@@ -33,62 +33,30 @@
 			animation-duration: 10s;
 			animation-iteration-count: infinite;
 			animation-timing-function: linear;
-			animation-name: top-svg-horizontal;
-			/* path {
-				animation-duration: 12s;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
-				&:nth-child(1) {
-					animation-name: top-svg-horizontal;
-				}
-				&:nth-child(2) {
-					animation-name: top-svg-vertical;
-				}
-			} */
-			/* defs radialGradient {
-				animation-duration: 20s;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
-				animation-name: top-svg-vertical;
-			} */
+			animation-name: top-svg-wave;
 		}
 	}
 }
 
-@keyframes top-svg-horizontal {
+@keyframes top-svg-wave {
 	0% {
-		//transform: translate(0, 0);
 		transform: scale(1);
 	}
 
 	25% {
-		//transform: rotate(-5deg);
-		transform: scale(1.05);
+		transform: scale(1.025);
 	}
 
 	50% {
-		//transform: rotate(-10deg);
-		transform: scale(1.1);
-	}
-
-	75% {
-		//transform: rotate(-5deg);
 		transform: scale(1.05);
 	}
 
+	75% {
+		transform: scale(1.025);
+	}
+
 	100% {
-		//transform: rotate(0deg);
 		transform: scale(1);
-	}
-}
-
-@keyframes top-svg-vertical {
-	0% {
-		transform: translate(0, 0);
-	}
-
-	100% {
-		transform: translate(0, 10rem);
 	}
 }
 

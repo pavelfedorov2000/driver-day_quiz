@@ -22,12 +22,9 @@ html {
     @media(max-width: 575px) {
         font-size: calc(100vw / 375 * 10);
     }
-    /* @media(max-width: 375px) {
+    @media(max-width: 374px) {
         font-size: calc(100vw / 320 * 10);
-    } */
-    /* @media(max-width: 375px) {
-        font-size: calc(100vw / 320 * 10);
-    } */
+    }
 }
 
 body {
@@ -39,11 +36,11 @@ body {
     font-style: normal;
     font-weight: 400;
     color: $dark;
-    /* &::-webkit-scrollbar {
+    &::-webkit-scrollbar {
         -webkit-appearance: none;
         width: 0;
         height: 0;
-    } */
+    }
     &._lock {
         overflow-y: hidden;
     }

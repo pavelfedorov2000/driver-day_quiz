@@ -1,56 +1,43 @@
-// Only arrow styling
-.select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(../img/select-drop.svg);
-    background-position: calc(100% - 20px) 50%;
-    background-repeat: no-repeat;
-}
-
 // Custom select
 .select {
     position: relative;
-    height: 30px;
-    line-height: 22px;
 
     &[data-state="active"] {
         .select__title {
-            background-color: $accent;
 
             &::after {
-                transform: rotate(180deg);
+                //transform: rotate(180deg);
             }
         }
 
         .select__content {
-            background-color: $accent;
             opacity: 1;
+            z-index: 8;
         }
-
-        /* .select__label+.select__input+.select__label {
-            border-top-width: 1px;
-        } */
     }
 }
 
 .select__title {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 6px 10px;
-    border: 0.5px solid #FFFFFF;
-    color: #BDBDBD;
+    padding: 1rem;
+    @extend %text-16;
+    color: rgba(4, 62, 68, 0.4);
+    border-bottom: 0.1rem solid rgba(4, 62, 68, 0.4);
     cursor: pointer;
 
     &::after {
         content: "";
-        position: absolute;
-        top: calc(50% - 3.5px);
-        right: 10px;
-        width: 13px;
-        height: 7px;
-        background-image: url(../img/drop-arr.svg);
+        @extend %pos-center-y;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../img/icons/drop-arrow.svg);
+        background-size: contain;
+        background-position: center;
         background-repeat: no-repeat;
         transition: all 0.3s ease-out;
     }
@@ -58,24 +45,38 @@
 
 .select__content {
     position: absolute;
-    top: 30px;
+    top: 100%;
     left: 0;
-    display: flex;
-    flex-direction: column;
+    right: 0;
+    height: 21.4rem;
+    overflow-y: scroll;
+    @extend %flex-col;
     width: 100%;
-    border: 0.5px solid #FFF;
-    padding: 12px 10px;
-    border-top: none;
+    background-color: #FFF;
+    box-shadow: 0rem 1.5rem 2.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 0rem 0rem 2rem 2rem;
+    padding: 1rem 0;
     transition: all 0.3s ease-out;
     opacity: 0;
-    z-index: 8;
+    z-index: -1;
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 0.5rem;
+        height: 4rem;
+        border-radius: 0.5rem;
+        background-color: $dark;
+    }
 }
 
 .select__input {
     display: none;
 
     &:checked+label {
-        color: #fff;
+        background-color: $accent;
     }
 
     /* &:disabled+label {
@@ -85,85 +86,15 @@
 }
 
 .select__label {
-    display: flex;
-    align-items: center;
+    padding: 1rem 2rem;
     width: 100%;
-    color: #BDBDBD;
+    @extend %text-16;
     cursor: pointer;
-    overflow: hidden;
+    transition: .3s background-color;
 
-    &:hover {
-        color: #ffffff;
-    }
-
-    &:not(:last-child) {
-        margin-bottom: 8px;
-    }
-}
-
-
-// FORM STYLER
-.jq-selectbox {
-    &__select {
-        height: 20px;
-        padding: 0 25px 0 0;
-        border-bottom-color: #b3b3b3;
-        border-radius: 0;
-        background: transparent;
-        //font-family: $second-font;
-        color: rgba(0, 0, 0, 0.6);
-        font-size: 14px;
-        line-height: 17px;
-        box-shadow: none;
-        text-shadow: none;
-        border: none;
-
+    @media (any-hover: hover) {
         &:hover {
-            background: transparent;
+            background-color: $accent;
         }
-
-        &:active {
-            background: transparent;
-            box-shadow: none;
-        }
-    }
-
-    &__trigger {
-        position: absolute;
-        top: 7px;
-        right: 9px;
-        width: 12px;
-        height: 8px;
-        background-image: url(../icons/arrows/drop-arrow.svg);
-        transform: rotate(0deg);
-        border-left: none;
-    }
-
-    &__trigger-arrow {
-        position: absolute;
-        top: 14px;
-        right: 12px;
-        width: 0;
-        height: 0;
-        border: none;
-    }
-
-    li {
-        color: rgba(0, 0, 0, 0.6);
-
-        &:hover {
-            background: rgba(107, 126, 172, 0.05);
-            color: rgba(0, 0, 0, 0.6);
-        }
-    }
-
-    li.selected {
-        background-color: transparent;
-        color: rgba(0, 0, 0, 0.6);
-    }
-
-    &__dropdown {
-        border-radius: 0;
-        padding-top: 15px;
     }
 }

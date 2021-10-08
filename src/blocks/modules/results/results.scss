@@ -1,9 +1,11 @@
 .results {
 
     position: relative;
+    height: 105.3rem;
     padding: 11.3rem 0 36.6rem;
     @media(max-width: 992px) {
         padding: 5rem 0;
+        height: auto;
     }
     @media(max-width: 767px) {
         padding: 2.1rem 0 3.4rem;
